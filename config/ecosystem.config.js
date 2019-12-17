@@ -19,7 +19,7 @@ module.exports = {
             repo: 'git@github.com:tjdals12/pm2-deploy-example.git',
             ssh_options: 'StrictHostKeyChecking=no',
             path: '/home/minz',
-            'post-deploy': 'yarn install',
+            'post-deploy': 'docker build -t pm2_example .',
         },
     },
 };
