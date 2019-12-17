@@ -16,8 +16,7 @@
 -   **out_file, error_file:** 로그 파일이 생성될 경로
 
 -   **merge_logs, combine_logs:** 로그를 한 파일에 작성함. 프로세스를 여러 개 실행할 경우 로그 파일도 각각 생성되기 때문에 설정해야 함.
-
-> 둘 중에 하나만 설정하면 된다. 같은 옵션이다.
+    > 둘 중에 하나만 설정하면 된다. 같은 옵션이다.
 
 &nbsp;
 
@@ -26,8 +25,7 @@
 -   **exec_mode:** 실행 모드. fork, cluster가 있음.
 
 *   **interpreter:** 바벨 설정을 해야 한다면 여기에 babel-node의 경로를 적음.
-
-> fork 모드에서만 사용할 수 있는 것 같다. cluster 모드에선 설정해도 안되서 트랜스파일 후에 실행시켰다.
+    > fork 모드에서만 사용할 수 있는 것 같다. cluster 모드에선 설정해도 안되서 트랜스파일 후에 실행시켰다.
 
 &nbsp;
 &nbsp;
@@ -47,8 +45,7 @@ production, development, staging으로 나누어 설정할 수 있다.
 -   path: 배포할 서버에서 소스가 내려받아질 경로
 
 -   pre-setup, post-setup: pm2 deploy setup 시 전후에 실행할 스크립트
-
-> Setup은 설정한 Repo를 내려받는 작업을 수행한다. pm2 deploy 시 해당 경로에서 실행할 파일을 찾기 때문에 Setup은 한번을 꼭 실행해야 한다.
+    > Setup은 설정한 Repo를 내려받는 작업을 수행한다. pm2 deploy 시 해당 경로에서 실행할 파일을 찾기 때문에 Setup은 한번을 꼭 실행해야 한다.
 
 &nbsp;
 

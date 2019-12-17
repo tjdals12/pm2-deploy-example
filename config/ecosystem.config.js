@@ -20,6 +20,8 @@ module.exports = {
             ssh_options: 'StrictHostKeyChecking=no',
             path: '/home/minz',
             'post-setup': 'echo $(docker --version)',
+            'pre-deploy':
+                'docker stop $(docker ps -aq) && docker rm $(docker ps -aq)',
             'post-deploy':
                 'docker build -t deploy_example . && docker run -d -p 4000:4000 --name deploy_example deploy_example',
         },
