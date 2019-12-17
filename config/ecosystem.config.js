@@ -14,12 +14,13 @@ module.exports = {
     deploy: {
         production: {
             user: 'minz',
-            host: '192.168.7.11',
+            host: '192.168.7.12',
             ref: 'origin/master',
             repo: 'git@github.com:tjdals12/pm2-deploy-example.git',
             ssh_options: 'StrictHostKeyChecking=no',
             path: '/home/minz',
-            'post-deploy': 'yarn deploy',
+            'post-setup': 'echo $(docker --version)',
+            'post-deploy': 'docker build -t deploy_example .',
         },
     },
 };
