@@ -32,6 +32,7 @@
     "scripts": {
         "dev": "nodemon --watch src/ src/server.js --exec babel-node",
         "start": "node dist/app.js",
-        "build": "webpack --config ./config/webpack.config.js"
+        "build": "webpack --config ./config/webpack.config.js",
+        "deploy": "docker build -t pm2_example ."
     }
 }
