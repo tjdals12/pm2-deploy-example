@@ -1,0 +1,36 @@
+{
+    "name": "pm2-deploy-example",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/cli": "^7.7.5",
+        "@babel/core": "^7.7.5",
+        "@babel/node": "^7.7.4",
+        "@babel/polyfill": "^7.7.0",
+        "@babel/preset-env": "^7.7.6",
+        "babel-loader": "^8.0.6",
+        "eslint": "^6.7.2",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-config-prettier": "^6.7.0",
+        "eslint-plugin-import": "^2.19.1",
+        "eslint-plugin-prettier": "^3.1.2",
+        "nodemon": "^2.0.2",
+        "prettier": "^1.19.1",
+        "webpack": "^4.41.3",
+        "webpack-cli": "^3.3.10",
+        "webpack-node-externals": "^1.7.2"
+    },
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "koa": "^2.11.0",
+        "koa-bodyparser": "^4.2.1",
+        "koa-helmet": "^5.2.0",
+        "koa-router": "^7.4.0",
+        "koa2-cors": "^2.0.6"
+    },
+    "scripts": {
+        "dev": "nodemon --watch src/ src/server.js --exec babel-node",
+        "build": "webpack --config ./config/webpack.config.js"
+    }
+}
