@@ -11,4 +11,15 @@ module.exports = {
             exec_mode: 'cluster',
         },
     ],
+    deploy: {
+        production: {
+            user: 'minz',
+            host: '192.168.7.11',
+            ref: 'origin/master',
+            repo: 'git@github.com:tjdals12/pm2-deploy-example.git',
+            ssh_options: 'StrictHostKeyChecking=no',
+            path: '/home/minz',
+            'post-deploy': 'docker build -t pm2_example .',
+        },
+    },
 };

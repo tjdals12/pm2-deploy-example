@@ -31,6 +31,7 @@
     },
     "scripts": {
         "dev": "nodemon --watch src/ src/server.js --exec babel-node",
+        "start": "node dist/app.js",
         "build": "webpack --config ./config/webpack.config.js"
     }
 }
