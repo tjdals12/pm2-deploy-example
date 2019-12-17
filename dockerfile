@@ -12,4 +12,4 @@ RUN yarn build
 
 EXPOSE 4000
 
-CMD ["pm2-runtime", "config/ecosystem.config.js"]
+CMD ["pm2-runtime", "start", "config/ecosystem.config.js"]
